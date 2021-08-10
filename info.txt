@@ -1,0 +1,136 @@
+1) Todos los componentes son funciones
+2) Todos los componentes se llaman en mayuscula (PascalCasel)
+3) Todos los componentes tienen que tener un retorno
+
+
+function App () { return ? }
+
+
+const App = () => { return ? }
+const App = () => ? 
+
+
+class App {
+    render(){
+        return ?
+    }
+}
+
+
+
+
+JSX : Javascript y XML
+
+
+
+PROPS = Son los parametros que le llega a un componente. Pueden ser de cualquier tipo de dato. No hay limite de cantidad de props para pasar. Los props solo van de padre a hijo. Son de solo lectura.
+
+
+const App = (a) => { return a * 2 }
+
+App(1)
+
+<App  parametro="1" />
+
+
+const test = " \" "
+
+
+PREPROCESADORES DE CSS : LESS - SASS
+
+$colorPrimario : red;
+@colorPrimario : red;
+
+
+
+STATE : variables locales dentro de un componente que podemos controlar a traves de renders
+
+CICLO DE VIDA : Son todos los estadios a traves de los cuales un componente puede pasar
+
+Mount
+    constructor()
+    render()
+    componentDidMount()
+
+
+Update
+    render()
+    shouldComponentUpdate()
+
+
+Unmount
+    componentWillUnmount()
+
+
+
+
+
+
+class App extends React.Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            nombre: "Horacio"
+        }
+    }
+
+    componentDidMount(){
+        console.log("componentDidMount")
+    }
+
+
+    render(){
+        return(
+            <>
+                <Header>
+                    <p>ola k ase?</p>
+                </Header>
+            </>
+        )
+    }
+
+}
+ 
+
+
+HOOKS : Todos los hooks son funciones ejecutadas y cada uno hace algo distinto. Se tienen que ejecutar siempre en el mismo orden, es decir que no puedo tenerlos en condicionales y siempre tienen que estar adentro de una funcion (componente)
+
+- useEffect : te permite simular el ciclo de vida
+- useState : te permite tener "estado" 
+
+- useContext
+- useCallback
+- useMemo
+- useRef
+- useReducer
+- useLayoutEffect
+
+
+<button onclick=" >click</button>
+
+const button = document.getElementById("btn")
+
+button.onclick = function(){}
+
+button.addEventListener("click",function(){})
+
+
+
+Los componentes vuelven a renderizar si : 
+
+        - un state cambia 
+        - un prop cambia
+
+
+
+SPA = Single Page Application
+
+BrowserRouter : History API
+HashRouter : Location API 
+MemoryRouter : Una app que no esta en entorno navegador
+StaticRouter : SSR (Server Side Rendering)
+
+Link / NavLink : Genera un link sin recarga
+Route : Sirve para mostrar un componente cuando coincide con una ruta
+Switch : Hace un switch pero en componente
