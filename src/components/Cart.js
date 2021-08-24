@@ -15,6 +15,7 @@ const Cart = () => {
                     <button onClick={()=>removeItem(item.item.id)}>borrar</button>
                 </div>
             )}
+
         </div>
     )
 }

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-
-import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import ItemDetail from "./ItemDetail";
 
 const init = { id: 1, title: "Producto 1", description: "Lorem Ipsum", price: 100 , pictureUrl : "http://placehold.it/500x300" , stock : 10 }
 
